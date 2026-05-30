@@ -1,194 +1,367 @@
-// Mock movie data for Pupa Originals
+// src/data/movies.js
+// Public Domain Movies from Internet Archive
+// All movies are legally free to stream
 
-export const HERO_MOVIES = [
+export const movies = [
+  // === NOLLYWOOD / AFRICAN CINEMA (Classic/Documentary) ===
   {
     id: 1,
-    title: "Blood of the Sahara",
-    tagline: "An empire rises. A bloodline falls.",
-    genre: ["Action", "Epic", "African"],
-    year: 2025,
-    duration: "2h 18m",
-    rating: "9.1",
-    backdrop: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1400&q=80",
-    poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80",
-    description: "In the heart of the Sahara, a forgotten dynasty awakens. A young warrior must reclaim her birthright before an ancient darkness consumes the continent.",
-    cast: ["Adesuwa Etomi", "Femi Jacobs", "Nse Ikpe-Etim"],
-    isPupa: true,
+    title: "The Original Soul Train Express",
+    year: 1925,
+    genre: ["Documentary", "Music"],
+    category: "African Cinema",
+    rating: 8.5,
+    duration: "15 min",
+    description: "A celebration of Black American female artists featuring singer Ethel Waters and film director Eloyce Gist. A musical journey through early 20th century Black culture.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=the-original-soul-train-express&mediatype=movies",
+    videoUrl: "https://archive.org/download/the-original-soul-train-express/format=h.264",
+    director: "Eloyce Gist",
+    cast: ["Ethel Waters"],
+    isPublicDomain: true
   },
   {
     id: 2,
-    title: "Lagos After Dark",
-    tagline: "The city never sleeps. Neither does justice.",
-    genre: ["Thriller", "Crime", "Drama"],
-    year: 2025,
-    duration: "1h 54m",
-    rating: "8.7",
-    backdrop: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=80",
-    poster: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?w=400&q=80",
-    description: "A rogue detective navigates Lagos's underground crime world in a race against time to expose a conspiracy reaching the highest offices of power.",
-    cast: ["Ramsey Nouah", "Genevieve Nnaji", "Jim Iyke"],
-    isPupa: true,
+    title: "Echoes of Time",
+    year: 2026,
+    genre: ["Documentary", "History"],
+    category: "Documentary",
+    rating: 8.2,
+    duration: "12 min",
+    description: "A reminder that even during times of adversity, we can look back and remember similar events that have brought us to where we are today. People shape the world with their ideas.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=echoes-of-time-khong-l&mediatype=movies",
+    videoUrl: "https://archive.org/download/echoes-of-time-khong-l/format=MPEG4",
+    director: "Khong L",
+    cast: [],
+    isPublicDomain: true
   },
+
+  // === CLASSIC HORROR ===
   {
     id: 3,
-    title: "Queen of Benin",
-    tagline: "She chose her crown over her heart.",
-    genre: ["Historical", "Romance", "Drama"],
-    year: 2024,
-    duration: "2h 32m",
-    rating: "9.3",
-    backdrop: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1400&q=80",
-    poster: "https://images.unsplash.com/photo-1605106702734-205df224ecce?w=400&q=80",
-    description: "A breathtaking retelling of the legendary Queen Idia — the first Iyoba of the Benin Kingdom — who defied tradition to shape an empire.",
-    cast: ["Joke Silva", "Bimbo Akintola", "Seun Ajayi"],
-    isPupa: true,
+    title: "Night of the Living Dead",
+    year: 1968,
+    genre: ["Horror", "Thriller"],
+    category: "Horror",
+    rating: 9.0,
+    duration: "1h 36m",
+    description: "A group of people hide from bloodthirsty zombies in a farmhouse. George A. Romero's groundbreaking horror classic that defined the zombie genre.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=night_of_the_living_dead&mediatype=movies",
+    videoUrl: "https://archive.org/download/night_of_the_living_dead/night_of_the_living_dead.mp4",
+    director: "George A. Romero",
+    cast: ["Duane Jones", "Judith O'Dea"],
+    isPublicDomain: true
   },
+  {
+    id: 4,
+    title: "White Zombie",
+    year: 1932,
+    genre: ["Horror", "Classic"],
+    category: "Horror",
+    rating: 7.8,
+    duration: "1h 7m",
+    description: "A young man turns to a witch doctor to lure the woman he loves away from her fiancé, but instead turns her into a zombie slave. Bela Lugosi stars.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=WhiteZombie&mediatype=movies",
+    videoUrl: "https://archive.org/download/WhiteZombie/WhiteZombie.mp4",
+    director: "Victor Halperin",
+    cast: ["Bela Lugosi", "Madge Bellamy"],
+    isPublicDomain: true
+  },
+  {
+    id: 5,
+    title: "Häxan: Witchcraft Through the Ages",
+    year: 1922,
+    genre: ["Horror", "Documentary"],
+    category: "Horror",
+    rating: 8.4,
+    duration: "1h 45m",
+    description: "A historical horror film about witchcraft, demonology, and superstition in the Middle Ages. A silent film masterpiece with stunning visual effects.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=haxan-1922_202312&mediatype=movies",
+    videoUrl: "https://archive.org/download/haxan-1922_202312/haxan-1922_202312.mp4",
+    director: "Benjamin Christensen",
+    cast: ["Benjamin Christensen"],
+    isPublicDomain: true
+  },
+
+  // === CLASSIC FILM NOIR / THRILLER ===
+  {
+    id: 6,
+    title: "D.O.A.",
+    year: 1949,
+    genre: ["Film Noir", "Thriller"],
+    category: "Thriller",
+    rating: 8.1,
+    duration: "1h 23m",
+    description: "A man who has been poisoned and has only days to live tries to find out who poisoned him and why. One of the greatest film noir classics.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=doa_1949&mediatype=movies",
+    videoUrl: "https://archive.org/download/doa_1949/doa_1949.mp4",
+    director: "Rudolph Maté",
+    cast: ["Edmond O'Brien", "Pamela Britton"],
+    isPublicDomain: true
+  },
+  {
+    id: 7,
+    title: "The Last Man on Earth",
+    year: 1964,
+    genre: ["Sci-Fi", "Horror"],
+    category: "Sci-Fi",
+    rating: 8.0,
+    duration: "1h 26m",
+    description: "When a disease turns all of humanity into the living dead, the last man on earth becomes a vampire hunter. Vincent Price stars in this apocalyptic classic.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=LastManOnEarth&mediatype=movies",
+    videoUrl: "https://archive.org/download/LastManOnEarth/LastManOnEarth.mp4",
+    director: "Ubaldo Ragona",
+    cast: ["Vincent Price", "Franca Bettoia"],
+    isPublicDomain: true
+  },
+  {
+    id: 8,
+    title: "The Cabinet of Dr. Caligari",
+    year: 1920,
+    genre: ["Horror", "Silent"],
+    category: "Classic",
+    rating: 9.2,
+    duration: "1h 17m",
+    description: "A hypnotist uses a somnambulist to commit murders. The quintessential German Expressionist film with iconic twisted set designs.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=TheCabinetOfDr.Caligari1919&mediatype=movies",
+    videoUrl: "https://archive.org/download/TheCabinetOfDr.Caligari1919/TheCabinetOfDr.Caligari1919.mp4",
+    director: "Robert Wiene",
+    cast: ["Werner Krauss", "Conrad Veidt"],
+    isPublicDomain: true
+  },
+
+  // === ANIMATION ===
+  {
+    id: 9,
+    title: "Jack and the Beanstalk",
+    year: 1933,
+    genre: ["Animation", "Fantasy"],
+    category: "Animation",
+    rating: 7.5,
+    duration: "8 min",
+    description: "Ub Iwerks' classic ComiColor cartoon retelling of the fairy tale with stunning early animation techniques and vibrant colors.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/UB%20Iwerks%20Jack%20and%20the%20Beanstalk%201933.mp4",
+    director: "Ub Iwerks",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 10,
+    title: "The Headless Horseman",
+    year: 1934,
+    genre: ["Animation", "Horror"],
+    category: "Animation",
+    rating: 7.3,
+    duration: "10 min",
+    description: "A ComiColor cartoon adaptation of Washington Irving's Legend of Sleepy Hollow with Ichabod Crane and the terrifying Headless Horseman.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/The%20Headless%20Horseman%20%281934%29.mp4",
+    director: "Ub Iwerks",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 11,
+    title: "Balloon Land",
+    year: 1935,
+    genre: ["Animation", "Fantasy"],
+    category: "Animation",
+    rating: 7.6,
+    duration: "8 min",
+    description: "In a world made entirely of balloons, the inhabitants must defend themselves from the evil Pincushion Man. A whimsical Ub Iwerks classic.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Balloon%20Land%201935%20old%20free%20cartoons%20public%20domain.mp4",
+    director: "Ub Iwerks",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 12,
+    title: "Somewhere in Dreamland",
+    year: 1936,
+    genre: ["Animation", "Musical"],
+    category: "Animation",
+    rating: 8.0,
+    duration: "9 min",
+    description: "Two poor children dream of a magical land filled with food and toys. A beautifully animated and heartwarming Fleischer Studios color classic.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/Fleischer%20Color%20Classic%20Somewhere%20in%20Dreamland%201936%29%20%28old%20cartoon%20vintage%20public%20domain%29.mp4",
+    director: "Dave Fleischer",
+    cast: [],
+    isPublicDomain: true
+  },
+
+  // === DOCUMENTARIES ===
+  {
+    id: 13,
+    title: "The Triumph of the Human Spirit",
+    year: 2026,
+    genre: ["Documentary", "History"],
+    category: "Documentary",
+    rating: 8.3,
+    duration: "10 min",
+    description: "A remix of public domain footage exploring human ingenuity and perseverance through history, featuring early animation and industrial footage.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=the-triumph-of-the-human-spirit_202601&mediatype=movies",
+    videoUrl: "https://archive.org/download/the-triumph-of-the-human-spirit_202601/the-triumph-of-the-human-spirit_202601.mp4",
+    director: "Unknown",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 14,
+    title: "Dancing In Nature Wondering In Space",
+    year: 2026,
+    genre: ["Documentary", "Animation"],
+    category: "Documentary",
+    rating: 7.9,
+    duration: "8 min",
+    description: "From cartoon, documentary, and cinematic footage from the early 1930s, this film transports audiences through scenes of nature on planet Earth and beyond.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=dancing-in-nature-wondering-in-space-2026&mediatype=movies",
+    videoUrl: "https://archive.org/download/dancing-in-nature-wondering-in-space-2026/dancing-in-nature-wondering-in-space-2026.mp4",
+    director: "Unknown",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 15,
+    title: "JGutierrez Montage Cine 56",
+    year: 2026,
+    genre: ["Documentary", "History"],
+    category: "Documentary",
+    rating: 7.7,
+    duration: "6 min",
+    description: "A powerful montage of American Indian footage of colonization and the modern concept of the Apache helicopter - the modern war machine of colonization.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=jgutierrez-montage-cine-56&mediatype=movies",
+    videoUrl: "https://archive.org/download/jgutierrez-montage-cine-56/jgutierrez-montage-cine-56.mp4",
+    director: "JGutierrez",
+    cast: [],
+    isPublicDomain: true
+  },
+
+  // === CLASSIC SILENT FILMS ===
+  {
+    id: 16,
+    title: "Nosferatu",
+    year: 1922,
+    genre: ["Horror", "Silent"],
+    category: "Classic",
+    rating: 9.3,
+    duration: "1h 34m",
+    description: "The original vampire film. Count Orlok's haunting silhouette and Max Schreck's terrifying performance make this the greatest horror film of the silent era.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=nosferatu1922&mediatype=movies",
+    videoUrl: "https://archive.org/download/nosferatu1922/nosferatu1922.mp4",
+    director: "F.W. Murnau",
+    cast: ["Max Schreck", "Greta Schröder"],
+    isPublicDomain: true
+  },
+  {
+    id: 17,
+    title: "The Phantom of the Opera",
+    year: 1925,
+    genre: ["Horror", "Drama"],
+    category: "Classic",
+    rating: 8.7,
+    duration: "1h 47m",
+    description: "A disfigured musical genius haunts the Paris Opera House and falls in love with a beautiful soprano. Lon Chaney's iconic unmasking scene remains legendary.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=phantom_of_the_opera&mediatype=movies",
+    videoUrl: "https://archive.org/download/phantom_of_the_opera/phantom_of_the_opera.mp4",
+    director: "Rupert Julian",
+    cast: ["Lon Chaney", "Mary Philbin"],
+    isPublicDomain: true
+  },
+
+  // === MORE ANIMATION ===
+  {
+    id: 18,
+    title: "The Little Red Hen",
+    year: 1934,
+    genre: ["Animation", "Comedy"],
+    category: "Animation",
+    rating: 7.4,
+    duration: "8 min",
+    description: "The classic fairy tale about a hen who finds a grain of wheat and asks her farmyard friends to help plant it. A colorful ComiColor cartoon.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/Ub%20Iwerks%20The%20Little%20Red%20Hen%201934.mp4",
+    director: "Ub Iwerks",
+    cast: [],
+    isPublicDomain: true
+  },
+  {
+    id: 19,
+    title: "Ali Baba",
+    year: 1936,
+    genre: ["Animation", "Adventure"],
+    category: "Animation",
+    rating: 7.5,
+    duration: "9 min",
+    description: "The classic Arabian Nights tale of Ali Baba and the Forty Thieves, brought to life with beautiful early color animation by Ub Iwerks.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=pdcartooncollection&mediatype=movies",
+    videoUrl: "https://archive.org/download/pdcartooncollection/Ub%20Iwerks%20cartoon%20Comicolor%20Ali%20Baba%201936%29%20%28old%20free%20cartoons%20public%20domain%29.mp4",
+    director: "Ub Iwerks",
+    cast: [],
+    isPublicDomain: true
+  },
+
+  // === BONUS: CLASSIC COMEDY ===
+  {
+    id: 20,
+    title: "The General",
+    year: 1926,
+    genre: ["Comedy", "Action"],
+    category: "Classic",
+    rating: 9.1,
+    duration: "1h 19m",
+    description: "Buster Keaton's masterpiece about a Confederate train engineer who pursues Union spies who stole his locomotive. Considered one of the greatest films ever made.",
+    poster: "https://archive.org/services/get-item-image.php?identifier=the-general-1926&mediatype=movies",
+    videoUrl: "https://archive.org/download/the-general-1926/the-general-1926.mp4",
+    director: "Buster Keaton",
+    cast: ["Buster Keaton", "Marion Mack"],
+    isPublicDomain: true
+  }
 ];
 
-export const TRENDING = [
-  {
-    id: 10, title: "Eko Atlantic", genre: "Thriller", year: 2025,
-    poster: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=300&q=80",
-    rating: "8.4", isPupa: false,
-  },
-  {
-    id: 11, title: "Juju Season", genre: "Horror", year: 2025,
-    poster: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=300&q=80",
-    rating: "7.9", isPupa: false,
-  },
-  {
-    id: 12, title: "Naija Dreams", genre: "Comedy", year: 2025,
-    poster: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&q=80",
-    rating: "8.1", isPupa: false,
-  },
-  {
-    id: 13, title: "The Griot", genre: "Documentary", year: 2025,
-    poster: "https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d?w=300&q=80",
-    rating: "9.0", isPupa: true,
-  },
-  {
-    id: 14, title: "Delta Force", genre: "Action", year: 2025,
-    poster: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=300&q=80",
-    rating: "7.6", isPupa: false,
-  },
-  {
-    id: 15, title: "Silk Road Abuja", genre: "Drama", year: 2024,
-    poster: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=300&q=80",
-    rating: "8.8", isPupa: true,
-  },
+// Categories for filtering
+export const categories = [
+  "All",
+  "African Cinema",
+  "Animation",
+  "Classic",
+  "Documentary",
+  "Horror",
+  "Sci-Fi",
+  "Thriller"
 ];
 
-export const PUPA_ORIGINALS = [
-  {
-    id: 20, title: "The Last Obi", genre: "Epic", year: 2025,
-    poster: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=300&q=80",
-    rating: "9.2", isPupa: true,
-  },
-  {
-    id: 21, title: "Afrobeats Rising", genre: "Documentary", year: 2025,
-    poster: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&q=80",
-    rating: "9.5", isPupa: true,
-  },
-  {
-    id: 22, title: "Midnight in Accra", genre: "Romance", year: 2025,
-    poster: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=300&q=80",
-    rating: "8.6", isPupa: true,
-  },
-  {
-    id: 23, title: "Iron Continent", genre: "Sci-Fi", year: 2025,
-    poster: "https://images.unsplash.com/photo-1446776858070-70c3d5ed6758?w=300&q=80",
-    rating: "8.9", isPupa: true,
-  },
-  {
-    id: 24, title: "Anansi's Web", genre: "Fantasy", year: 2024,
-    poster: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=300&q=80",
-    rating: "9.1", isPupa: true,
-  },
-];
-
-export const NEW_RELEASES = [
-  {
-    id: 30, title: "Calabar Nights", genre: "Romance", year: 2025,
-    poster: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&q=80",
-    rating: "7.8", isPupa: false,
-  },
-  {
-    id: 31, title: "The Herbalist", genre: "Mystery", year: 2025,
-    poster: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80",
-    rating: "8.3", isPupa: false,
-  },
-  {
-    id: 32, title: "Street Gospel", genre: "Drama", year: 2025,
-    poster: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300&q=80",
-    rating: "8.7", isPupa: true,
-  },
-  {
-    id: 33, title: "Harmattan Love", genre: "Romance", year: 2025,
-    poster: "https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=300&q=80",
-    rating: "7.5", isPupa: false,
-  },
-  {
-    id: 34, title: "Ogun's Wrath", genre: "Action", year: 2025,
-    poster: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=80",
-    rating: "8.4", isPupa: true,
-  },
-];
-
-export const AFRICAN_HITS = [
-  {
-    id: 40, title: "Black Panther Nile", genre: "Action", year: 2024,
-    poster: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=300&q=80",
-    rating: "9.0", isPupa: false,
-  },
-  {
-    id: 41, title: "Sankofa Rising", genre: "Historical", year: 2024,
-    poster: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=300&q=80",
-    rating: "8.8", isPupa: false,
-  },
-  {
-    id: 42, title: "Motherland", genre: "Drama", year: 2024,
-    poster: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=300&q=80",
-    rating: "9.3", isPupa: false,
-  },
-  {
-    id: 43, title: "Congo Blues", genre: "Musical", year: 2024,
-    poster: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=300&q=80",
-    rating: "8.5", isPupa: false,
-  },
-  {
-    id: 44, title: "Kilimanjaro", genre: "Adventure", year: 2024,
-    poster: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80",
-    rating: "8.2", isPupa: false,
-  },
-];
-
-export const TOP_10 = [
-  { id: 50, rank: 1, title: "Blood of the Sahara", poster: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=300&q=80", rating: "9.1" },
-  { id: 51, rank: 2, title: "Queen of Benin", poster: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=300&q=80", rating: "9.3" },
-  { id: 52, rank: 3, title: "Afrobeats Rising", poster: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&q=80", rating: "9.5" },
-  { id: 53, rank: 4, title: "The Last Obi", poster: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=300&q=80", rating: "9.2" },
-  { id: 54, rank: 5, title: "Motherland", poster: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=300&q=80", rating: "9.3" },
-  { id: 55, rank: 6, title: "Lagos After Dark", poster: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=300&q=80", rating: "8.7" },
-  { id: 56, rank: 7, title: "Silk Road Abuja", poster: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=300&q=80", rating: "8.8" },
-  { id: 57, rank: 8, title: "Anansi's Web", poster: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=300&q=80", rating: "9.1" },
-  { id: 58, rank: 9, title: "Street Gospel", poster: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300&q=80", rating: "8.7" },
-  { id: 59, rank: 10, title: "Iron Continent", poster: "https://images.unsplash.com/photo-1446776858070-70c3d5ed6758?w=300&q=80", rating: "8.9" },
-];
-
-export const CATEGORIES = [
-  { id: 1, name: "Action", image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&q=80", count: 148 },
-  { id: 2, name: "Nollywood", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80", count: 324 },
-  { id: 3, name: "Romance", image: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=400&q=80", count: 210 },
-  { id: 4, name: "Drama", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80", count: 276 },
-  { id: 5, name: "Documentary", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80", count: 89 },
-  { id: 6, name: "Animation", image: "https://images.unsplash.com/photo-1574169208507-84376144848b?w=400&q=80", count: 67 },
-  { id: 7, name: "Comedy", image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&q=80", count: 192 },
-  { id: 8, name: "Thriller", image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&q=80", count: 155 },
-];
-
-export const PRICING = {
-  NG: { currency: "₦", basic: 1500, premium: 3500, family: 5500 },
-  GH: { currency: "₵", basic: 35, premium: 80, family: 120 },
-  UK: { currency: "£", basic: 5.99, premium: 10.99, family: 16.99 },
-  US: { currency: "$", basic: 6.99, premium: 12.99, family: 18.99 },
+// Get featured movies (top rated)
+export const getFeaturedMovies = () => {
+  return movies
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 5);
 };
+
+// Get movies by category
+export const getMoviesByCategory = (category) => {
+  if (category === "All") return movies;
+  return movies.filter(movie => movie.category === category);
+};
+
+// Get movie by ID
+export const getMovieById = (id) => {
+  return movies.find(movie => movie.id === id);
+};
+
+// Get trending movies (random selection for demo)
+export const getTrendingMovies = () => {
+  return [...movies]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 8);
+};
+
+// Get top 10
+export const getTop10 = () => {
+  return movies
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 10);
+};
+
+export default movies;
