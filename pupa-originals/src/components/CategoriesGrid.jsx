@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { CATEGORIES } from '../data/movies';
+import { CATEGORIES } from '../pages/movies';
 
 export default function CategoriesGrid() {
   return (
