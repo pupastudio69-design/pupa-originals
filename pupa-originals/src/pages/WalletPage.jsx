@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Wallet, CreditCard, Gift, Tag, Users, ChevronRight, TrendingUp, Star } from 'lucide-react';
-import { PRICING } from '../data/movies';
+import { PRICING } from '../../../src/data/movies';
 
 export default function WalletPage() {
   const [region, setRegion] = useState('NG');
