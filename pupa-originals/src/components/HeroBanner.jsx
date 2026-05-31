@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Play, Info, Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { HERO_MOVIES } from '../pages/movies';
+import { HERO_MOVIES } from '../../../src/data/movies';
 
 export default function HeroBanner({ onMovieSelect }) {
   const [current, setCurrent] = useState(0);

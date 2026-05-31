@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight, Star } from 'lucide-react';
-import { TOP_10 } from '../pages/movies';
+import { TOP_10 } from '../../../src/data/movies';
 
 export default function Top10Row({ onMovieSelect }) {
   return (

@@ -5,7 +5,7 @@ import CategoriesGrid from '../components/CategoriesGrid';
 import Top10Row from '../components/Top10Row';
 import {
   TRENDING, PUPA_ORIGINALS, NEW_RELEASES, AFRICAN_HITS, TOP_10
-} from './movies';
+} from '../../../src/data/movies';
 
 // Continue watching mock
 const CONTINUE_WATCHING = [
