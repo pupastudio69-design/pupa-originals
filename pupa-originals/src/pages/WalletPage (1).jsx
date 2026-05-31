@@ -1,5 +1,4 @@
-
-wallet_page_code = '''import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Wallet, CreditCard, Gift, Users, Star, X, Globe, Share2, Check, Crown, Film, Sparkles, Popcorn, Heart, Flame, Diamond, Zap, Play, Clock, Lock, Unlock } from 'lucide-react';
 
 // Pricing data by region
@@ -185,10 +184,10 @@ export default function WalletPage() {
 
   const handleSendGift = () => {
     if (!selectedMovie || !selectedGift) return;
-    
+
     const gift = MOVIE_GIFTS.find(g => g.id === selectedGift);
     const totalPrice = gift.price * giftQuantity;
-    
+
     // Can pay with balance or points (1 point = 1 currency unit)
     const canPayWithBalance = balance >= totalPrice;
     const canPayWithPoints = points >= totalPrice;
